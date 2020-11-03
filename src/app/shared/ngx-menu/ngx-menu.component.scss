@@ -1,0 +1,153 @@
+@import "../../../assets/variables.scss";
+@import "../../../assets/mixins.scss";
+
+.menu {
+  font-weight: 400;
+  margin: 0 1rem;
+
+  &-toggle {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin: 0;
+    padding: 0;
+    display: none;
+    z-index: 10;
+    cursor: pointer;
+
+    .show {
+      display: block;
+    }
+
+    .line {
+      height: 4px;
+      background-color: #fff;
+      width: 100%;
+      display: block;
+      margin: 4px 0;
+      border-radius: 5px;
+      transition-duration: 0.3s;
+    }
+  }
+  &-items {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: unset;
+    font-size: 1.8rem;
+
+    &.side {
+      max-width: 320px;
+      flex-direction: column;
+    }
+  }
+
+  &-item {
+    list-style: none;
+    padding: 0.5rem 0.75rem;
+    border-bottom: solid 1px $red;
+
+    &:hover {
+      background-color: $red-light;
+    }
+
+    &-header {
+      text-align: center;
+      font-size: 1.8rem;
+      display: none;
+      &:hover {
+        background-color: unset;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .menu {
+    &-toggle {
+      display: block;
+    }
+    &-items {
+      display: none;
+    }
+    &-open {
+      background-color: $red;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+
+      .menu-toggle {
+        .line:first-of-type {
+          transform: rotate(45deg) translate(7px, 7px);
+        }
+        .line:nth-child(2) {
+          opacity: 0;
+        }
+
+        .line:last-of-type {
+          transform: rotate(-45deg) translate(4px, -5px);
+        }
+      }
+
+      .menu-items {
+        text-align: left;
+        display: block;
+        padding-left: 0;
+        width: 100%;
+
+        li {
+          transition-duration: 0.5s;
+          font-size: 2.2rem;
+          line-height: 4rem;
+          display: block;
+          border-bottom: solid 1px #a75656;
+          padding: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// @media screen and (max-width: 768px) {
+//   .menu {
+//     background-color: green;
+//     max-width: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100vh;
+//     width: 100vw;
+
+//     &-toggle {
+//       display: block;
+//     }
+
+//     &-items {
+//       flex-direction: column;
+//       font-size: 1.4rem;
+
+//       &-header {
+//         display: block;
+//       }
+
+//       &-footer {
+//         align-self: flex-end;
+//       }
+//     }
+//   }
+// }

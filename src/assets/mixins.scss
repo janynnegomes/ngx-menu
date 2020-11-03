@@ -1,0 +1,41 @@
+@mixin breakpoint($point) {
+  $bp-mobile: "(max-width: 600px)";
+  $bp-tablet: "(min-width: 601px) and (max-width: 1023px)";
+  $bp-desktop: "(min-width: 1024px)";
+
+  @if $point == mobile {
+    @media #{$bp-mobile} {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media #{$bp-tablet} {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media #{$bp-desktop} {
+      @content;
+    }
+  }
+}
+
+@mixin flex_row() {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex_col() {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin icon($src, $size) {
+  span.icon {
+    width: $size px;
+    heigth: $size px;
+    background: url($src);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+  }
+}

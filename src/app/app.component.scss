@@ -1,0 +1,29 @@
+@import "../assets/variables.scss";
+@import "../assets/mixins.scss";
+
+header {
+  .logo {
+    width: 2em;
+    margin: 1em;
+    img {
+      width: 100%;
+      filter: brightness(10);
+    }
+  }
+}
+
+.layout {
+  justify-content: center;
+  align-content: center;
+  background-color: $white;
+}
+
+footer {
+  color: $gray-dark;
+  font-size: 0.75rem;
+  text-align: center;
+  a {
+    color: $blue;
+    font-weight: 600;
+  }
+}
