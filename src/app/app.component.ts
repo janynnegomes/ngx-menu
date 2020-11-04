@@ -9,12 +9,12 @@ export class AppComponent {
   name = "Angular " + VERSION.major;
 
   items = [
-    { label: "Home", icon: "faCoffee" },
+    { label: "Home", icon: "home" },
 
-    { label: "Projects", icon: "fa-home" },
+    { label: "Projects", icon: "work" },
 
-    { label: "Services", icon: "fa-home" },
+    { label: "Services", icon: "favourite" },
 
-    { label: "Contact", icon: "fa-home" }
+    { label: "Contact", icon: "message" }
   ];
 }
