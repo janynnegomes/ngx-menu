@@ -7,7 +7,7 @@ import { SharedModule } from "./shared/shared.module";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @NgModule({
-  imports: [BrowserModule, FontAwesomeModule, FormsModule, SharedModule],
+  imports: [BrowserModule, FormsModule, SharedModule, FontAwesomeModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,5 @@
 import { Component, VERSION } from "@angular/core";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "my-app",
@@ -9,7 +10,7 @@ export class AppComponent {
   name = "Angular " + VERSION.major;
 
   items = [
-    { label: "Home", icon: "fa-home" },
+    { label: "Home", icon: faCoffee },
 
     { label: "Projects", icon: "fa-home" },
 
