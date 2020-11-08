@@ -19,10 +19,10 @@ export class AppComponent {
   ];
 
   menuClosed(state) {
-    alert(state);
+    console.log(state);
   }
 
   menuOpened(state) {
-    alert(state);
+    console.log(state);
   }
 }

@@ -91,6 +91,7 @@
 
 @include breakpoint(mobile) {
   .menu {
+    overflow: hidden;
     &-toggle {
       display: block;
     }
