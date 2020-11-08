@@ -17,4 +17,12 @@ export class AppComponent {
 
     { label: "Contact", icon: "message" }
   ];
+
+  menuClosed(state) {
+    alert(state);
+  }
+
+  menuOpened(state) {
+    alert(state);
+  }
 }

@@ -3,7 +3,7 @@
 		<img src="../assets/img/logo.svg">
 
    </div>
-		<ngx-menu [items]="items">
+		<ngx-menu [items]="items" (closed)="menuClosed($event)" (opened)="menuOpened($event)">
 		</ngx-menu>
 </header>
 <section class="layout">

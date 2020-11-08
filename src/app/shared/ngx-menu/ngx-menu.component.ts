@@ -1,4 +1,11 @@
-import { Component, ContentChild, Input, TemplateRef } from "@angular/core";
+import {
+  Component,
+  ContentChild,
+  EventEmitter,
+  Input,
+  Output,
+  TemplateRef
+} from "@angular/core";
 
 @Component({
   selector: "ngx-menu",
@@ -12,7 +19,15 @@ export class NgxMenuComponent {
   @Input()
   items: Array<any> = [];
 
+  @Output()
+  opened = new EventEmitter();
+
+  @Output()
+  closed = new EventEmitter();
+
   toggle() {
     this.isOpen = !this.isOpen;
+
+    this.opened.emit(this.isOpen ? "opened" : "closed");
   }
 }
