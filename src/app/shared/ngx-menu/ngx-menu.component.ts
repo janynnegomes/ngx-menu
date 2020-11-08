@@ -28,6 +28,6 @@ export class NgxMenuComponent {
   toggle() {
     this.isOpen = !this.isOpen;
 
-    this.opened.emit(this.isOpen ? "opened" : "closed");
+    this.isOpen ? this.opened.emit("opened") : this.closed.emit("closed");
   }
 }
