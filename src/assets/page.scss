@@ -1,5 +1,6 @@
+@import "../assets/mixins.scss";
+
 .page {
-  border: dashed 5px $gray-light;
   padding: 2rem;
 
   &-header {
@@ -14,5 +15,11 @@
       margin: 4rem auto;
       display: block;
     }
+  }
+}
+
+@include breakpoint(mobile) {
+  .page {
+    border-top: dashed 5px $gray-light;
   }
 }
