@@ -16,6 +16,15 @@ header {
   justify-content: center;
   align-content: center;
   background-color: $white;
+
+  .page {
+    background-color: $gray-light;
+    padding: 2rem;
+
+    &-heeader {
+      text-align: center;
+    }
+  }
 }
 
 footer {
