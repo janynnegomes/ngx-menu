@@ -48,9 +48,10 @@ export class NgxMenuComponent implements OnInit {
     this.isOpen ? this.opened.emit("opened") : this.closed.emit("closed");
   }
 
-  selectItem(item: number) {
+  selectItem(item: number, path: string) {
     this.menu.selectItem(item);
     this.toggle();
+    this.goTo(path);
   }
   get itemsList() {
     return Array.from(this.items);
