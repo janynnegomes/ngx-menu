@@ -64,13 +64,18 @@ body {
 }
 
 @include breakpoint(mobile) {
-  .layout {
-    margin: 0;
-    border-radius: 0;
+  html {
+    // á cada 1rem será considerado 10px
+    font-size: 70%;
 
-    .column {
-      text-align: center;
-      padding: 1rem;
+    .layout {
+      margin: 0;
+      border-radius: 0;
+
+      .column {
+        text-align: center;
+        padding: 1rem;
+      }
     }
   }
 }
