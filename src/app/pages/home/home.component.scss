@@ -1,3 +1,14 @@
-page-home {
-  background-color: red;
+@import "../../../assets/mixins.scss";
+
+.page-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 3rem;
+}
+
+@include breakpoint(mobile) {
+  .page-content {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+  }
 }
