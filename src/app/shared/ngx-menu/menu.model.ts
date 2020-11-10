@@ -11,6 +11,10 @@ export class Menu {
   get selectedItem() {
     return this.items.get(this.selectedIndex);
   }
+
+  selectItem(index: number) {
+    this.selectedIndex = index;
+  }
 }
 
 export class MenuItem {

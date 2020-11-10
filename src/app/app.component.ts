@@ -10,13 +10,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.items = new Map();
     this.items.set(0, new MenuItem("Home", "home"));
-
-    //   { label: "Projects", icon: "work" },
-
-    //   { label: "Services", icon: "favourite" },
-
-    //   { label: "Contact", icon: "message" }
-    // ];
+    this.items.set(1, new MenuItem("Projects", "work"));
+    this.items.set(2, new MenuItem("Services", "favourite"));
+    this.items.set(3, new MenuItem("Contact", "message"));
   }
   name = "Angular " + VERSION.major;
 
