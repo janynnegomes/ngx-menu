@@ -1,0 +1,12 @@
+.page {
+  border: dashed 5px $gray-light;
+  padding: 2rem;
+
+  &-header {
+    text-align: center;
+  }
+
+  &-content {
+    text-align: left;
+  }
+}

@@ -16,19 +16,6 @@ header {
   justify-content: center;
   align-content: center;
   background-color: $white;
-
-  .page {
-    border: dashed 5px $gray-light;
-    padding: 2rem;
-
-    &-header {
-      text-align: center;
-    }
-
-    &-content {
-      text-align: left;
-    }
-  }
 }
 
 footer {
