@@ -6,9 +6,10 @@
 	</div>
 	<ul class="menu-items">
 		<li class="menu-item menu-item-header">Menu</li>
-		<li class="menu-item" (click)="toggle()" *ngFor="let item of items"><a href="#{{item.label}}">
-				<img src="../../../assets/img/{{item.icon}}.svg"/>{{item.label}}</a>
-		</li>
+    {{itemsList | jso}}
+		<!-- <li class="menu-item" (click)="toggle()" *ngFor="let item of itemsList"><a href="#{{itemtitle}}">
+				<img src="../../../assets/img/{{item.icon}}.svg"/>{{item.title}}</a>
+		</li> -->
 		<li class="menu-item menu-item-footer">
 			<a href="#logout"><img src="../../../assets/img/logout.svg"/>Logout</a></li>
 	</ul>
