@@ -18,7 +18,7 @@ header {
   background-color: $white;
 
   .page {
-    background-color: $gray-light;
+    border: dashed 5px $gray-light;
     padding: 2rem;
 
     &-header {
