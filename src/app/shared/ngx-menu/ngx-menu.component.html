@@ -7,8 +7,7 @@
 	<ul class="menu-items">
 		<li class="menu-item menu-item-header">Menu</li>
 		<li class="menu-item {{item[1].cssClass}}" [ngClass]="{'is-selected':menu.selectedIndex === item[0]}"
-			(click)="selectItem(item[0], item[1].path)" *ngFor="let item of itemsList"><a href="#{{item[1].title}}"
-				*ngIf="item[1].isEnabled">
+			(click)="selectItem(item[0], item[1].path)" *ngFor="let item of itemsList"><a *ngIf="item[1].isEnabled">
 				<img src="../../../assets/img/{{item[1].icon}}.svg"/>{{item[1].title}}</a>
 		</li>
 		<li class="menu-item menu-item-footer">
