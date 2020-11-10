@@ -20,17 +20,20 @@ export class Menu {
 export class MenuItem {
   title: string;
   icon: string;
+  path: string;
   tooltip?: string;
   cssClass?: string;
   isEnabled: boolean = true;
 
   constructor(
     title: string,
+    path: string,
     icon: string,
     tooltip: string = "",
     cssClass: string = ""
   ) {
     this.title = title;
+    this.path = path;
     this.icon = icon;
     this.tooltip = tooltip;
     this.cssClass = cssClass;

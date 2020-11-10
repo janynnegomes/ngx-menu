@@ -7,6 +7,7 @@ import {
   Output,
   TemplateRef
 } from "@angular/core";
+import { Router } from "@angular/router";
 import { Menu, MenuItem } from "./menu.model";
 
 @Component({
@@ -15,6 +16,7 @@ import { Menu, MenuItem } from "./menu.model";
   styleUrls: ["./ngx-menu.component.scss"]
 })
 export class NgxMenuComponent implements OnInit {
+  constructor(private router: Router) {}
   position: string = "left";
   menu: Menu;
   /*
@@ -52,5 +54,9 @@ export class NgxMenuComponent implements OnInit {
   }
   get itemsList() {
     return Array.from(this.items);
+  }
+
+  goTo(path: string) {
+    this.router.navigate([path]);
   }
 }
