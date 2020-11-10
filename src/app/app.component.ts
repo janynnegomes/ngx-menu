@@ -1,4 +1,6 @@
+import { Route } from "@angular/compiler/src/core";
 import { Component, OnInit, VERSION } from "@angular/core";
+import { Router } from "@angular/router";
 import { MenuItem } from "./shared/ngx-menu/menu.model";
 
 @Component({
@@ -7,6 +9,7 @@ import { MenuItem } from "./shared/ngx-menu/menu.model";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
+  constructor(public route: Router) {}
   ngOnInit(): void {
     this.items = new Map();
     this.items.set(0, new MenuItem("Home", "home", "home"));
