@@ -35,6 +35,14 @@ body {
     color: $gray-dark;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    transition-duration: 2s;
+  }
+
   p {
     font-size: 1.8rem;
     font-weight: 200;
