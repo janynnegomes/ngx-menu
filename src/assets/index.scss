@@ -16,6 +16,7 @@ body {
   img {
     max-width: 100%;
     transition-duration: 2s;
+    animation: fadeIn 3s ease-in;
   }
 
   h1 {
@@ -86,5 +87,14 @@ body {
         padding: 1rem;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
